@@ -19,10 +19,11 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+    let pic = {
+      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    };
     return (
-      <View>
-        <Text>Hello world!</Text>
-      </View>
+      <Image source={pic} style={{width: 193, height: 110}}/>
     );
   }
 }
