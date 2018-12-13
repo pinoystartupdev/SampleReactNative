@@ -17,13 +17,28 @@ const instructions = Platform.select({
 });
 
 type Props = {};
+
+class Greeting extends Component {
+  render() {
+    return (
+        <View style={{alignItems: 'center'}}>
+          <Text>Hello {this.props.name}!</Text>
+        </View>
+    );
+  }
+}
+
 export default class App extends Component<Props> {
   render() {
     let pic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <Image source={pic} style={{width: '100%', height: 300}}/>
+        <View style={{alignItems: 'center'}}>
+          <Greeting name='Rexxar' />
+          <Greeting name='Jaina' />
+          <Greeting name='Valeera' />
+        </View>
     );
   }
 }
