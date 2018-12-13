@@ -30,9 +30,6 @@ class Greeting extends Component {
 
 export default class App extends Component<Props> {
   render() {
-    let pic = {
-      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
     return (
         <View style={{alignItems: 'center'}}>
           <Greeting name='Rexxar' />
