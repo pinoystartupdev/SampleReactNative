@@ -46,30 +46,22 @@ export default class App extends Component<Props> {
   render() {
     return (
         <View>
-          <Blink text='I love to blink' />
-          <Blink text='Yes blinking is so great' />
-          <Blink text='Why did they ever take this out of HTML' />
-          <Blink text='Look at me look at me look at me' />
+          <Text style={styles.red}>just red</Text>
+          <Text style={styles.bigblue}>just bigblue</Text>
+          <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
+          <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
         </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  bigblue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  red: {
+    color: 'red',
   },
 });
